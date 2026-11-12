@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IRONMIND — One App. Every Fitness Journey.</title>
+<meta name="description" content="Free, open-source fitness and nutrition tracker. Works offline. Your data stays on your device.">
+<meta name="theme-color" content="#0b0d0c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon.svg">
+<link rel="stylesheet" href="styles.css">
+<script>
+  try { var t = localStorage.getItem('im_theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+<div id="app">
+  <header class="topbar"><span class="logo">IRON<b>MIND</b></span><span id="topdate" class="muted"></span></header>
+  <main id="view" tabindex="-1" aria-live="polite"></main>
+  <nav id="nav" aria-label="Main navigation"></nav>
+</div>
+<div id="modal" class="modal" hidden><div class="sheet" role="dialog" aria-modal="true" id="sheet"></div></div>
+<div id="restbar" class="restbar" hidden></div>
+<div id="toast" class="toast" hidden role="status"></div>
+<noscript><p style="padding:24px">IRONMIND needs JavaScript to run.</p></noscript>
+<script src="data.js"></script>
+<script src="calc.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
